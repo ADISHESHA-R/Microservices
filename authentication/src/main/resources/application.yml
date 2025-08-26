@@ -1,0 +1,21 @@
+server:
+  port: 8081
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/elearndb   # replace with your MongoDB connection string
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+
+jwt:
+  access-secret: "8r7t6y5u4i3o2p1q0w9e8r7t6y5u4i3o"
+  refresh-secret: "1q2w3e4r5t6y7u8i9o0p1q2w3e4r5t6y"
+  access-exp-ms: 900000        # 15 minutes
+  refresh-exp-ms: 1209600000   # 14 days
+
+logging:
+  level:
+    org.springframework: INFO
+    com.elearn: DEBUG
